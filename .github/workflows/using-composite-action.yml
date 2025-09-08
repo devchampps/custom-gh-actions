@@ -6,8 +6,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Use my composite action
-      - uses: actions/checkout@v4
-      - uses: ../actions/my-composite-action
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Use my Custom Composite action
+        uses: ../actions/my-composite-action
         with:
           node-version: '18'
