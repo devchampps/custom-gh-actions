@@ -1,0 +1,14 @@
+name: "Setup MyCLI"
+description: "Installs MyCLI and adds it to the PATH"
+author: "Abdullah Shafiq"
+
+inputs:
+  version:
+    description: "The CLI version to install"
+    required: false
+    default: "latest"
+
+#this action runs JavaScript code using Node.js 16 
+runs:
+  using: "node16"
+  main: "index.js"
