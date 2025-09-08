@@ -1,4 +1,4 @@
-name: "My Composite Action"
+name: "My-Composite-Action"
 description: "A reusable composite action that checks out code and sets up Node.js"
 
 inputs:
