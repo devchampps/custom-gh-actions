@@ -10,10 +10,11 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Use my Custom Composite action
+        id: use-my-custom-action
         uses: ./.github/actions/my-composite-action
         with:
           node-version: '18'
 
       - name: Display result
-          run: echo "Script Result: ${{ My-Composite-Action.script-result.value }}"
-         
+        run: |
+              echo "Script Result: ${{ steps.use-my-custom-action.outputs.script-result.value }}"

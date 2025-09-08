@@ -6,6 +6,11 @@ inputs:
     description: "The Node.js version to use"
     required: true
 
+outputs:
+  script-result:
+    description: "Result from the script"
+    value: ${{ steps.run-script.outputs.result }}
+
 runs:
   using: "composite"
   steps:
@@ -20,9 +25,4 @@ runs:
     - id: run-script
       run: echo "result=Success" >> $GITHUB_OUTPUT
       shell: bash
-
-outputs:
-  script-result:
-    description: "Result from the script"
-    value: ${{ steps.run-script.outputs.result }}
-
+      
