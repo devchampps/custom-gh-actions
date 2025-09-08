@@ -16,3 +16,13 @@ runs:
       uses: actions/setup-node@v4
       with:
         node-version: ${{ inputs.node-version }}
+
+    - id: run-script
+      run: echo "result=Success" >> $GITHUB_OUTPUT
+      shell: bash
+
+outputs:
+  script-result:
+    description: "Result from the script"
+    value: ${{ steps.run-script.outputs.result }}
+
