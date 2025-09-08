@@ -1,6 +1,6 @@
 name: Using Custom Acion
 on:
-  [push]
+  push
     branches: ["main"] 
 jobs:
   build:
