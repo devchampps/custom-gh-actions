@@ -13,3 +13,7 @@ jobs:
         uses: ./.github/actions/my-composite-action
         with:
           node-version: '18'
+
+      - name: Display result
+          run: echo "Script Result: ${{ My-Composite-Action.script-result.value }}"
+         
