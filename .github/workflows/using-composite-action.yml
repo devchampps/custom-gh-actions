@@ -1,8 +1,7 @@
 name: Using Custom Acion
 on:
-   [push]
-branch:
-  main 
+  [push]
+    branches: ["main"] 
 jobs:
   build:
     runs-on: ubuntu-latest
