@@ -17,4 +17,4 @@ jobs:
 
       - name: Display result
         run: |
-              echo "Script Result: ${{ steps.use-my-custom-action.outputs.script-result.value }}"
+              echo "Script Result: ${{ steps.use-my-custom-action.outputs.script-result }}"
